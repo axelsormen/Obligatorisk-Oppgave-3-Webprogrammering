@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="index.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <title>Kino</title>
+</head>
+<body>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <h3>Bestilling av kinobilletter</h3>
+            <form class="form">
+
+                <div class="form-group">
+                    <label for="film">Velg film: </label>
+                    <select id="film" name="film" class="form-control">
+                        <option selected disabled>Velg film her</option>
+                        <option value="Star Wars III: Revenge of the Sith">Star Wars III: Revenge of the Sith</option>
+                        <option value="Harry Potter and the Goblet of Fire">Harry Potter and the Goblet of Fire</option>
+                        <option value="John Wick">John Wick</option>
+                        <option value="Batman: The Dark Knight">Batman: The Dark Knight</option>
+                        <option value="James Bond: Goldeneye">James Bond: Goldeneye</option>
+                        <option value="American Pie Presents: Beta House">American Pie Presents: Beta House</option>
+                    </select>
+                    <div id="utFilm"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="antall">Antall: </label>
+                    <input type="number" class="form-control" id="antall"/>
+                    <div id="utAntall"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="fornavn">Fornavn: </label>
+                    <input type="text" class="form-control" id="fornavn"/>
+                    <div id="utFornavn"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="etternavn">Etternavn: </label>
+                    <input type="text" class="form-control" id="etternavn"/>
+                    <div id="utEtternavn"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="telefonnr">Telefonnr: </label>
+                    <input type="tel" class="form-control" id="telefonnr"/>
+                    <div id="utTelefonnr"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="epost">Epost: </label>
+                    <input type="email" class="form-control" id="epost"/>
+                    <div id="utEpost"></div>
+                </div>
+            </form>
+            <button class="btn btn-success" onclick="kjopBillett()">Kjøp billett</button>
+        </div>
+        <div class="col-md-8">
+            <h3>Alle billettene: </h3>
+            <div id="utMelding"></div>
+            <button class="btn btn-danger" onclick="slettBillett()">Slett alle billettene</button>
+        </div>
+    </div>
+</div>
+</body>
+</html>
